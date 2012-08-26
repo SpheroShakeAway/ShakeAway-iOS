@@ -119,6 +119,9 @@
     alarm = NO;
     [self changeTurn];
     timer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(changeTurn) userInfo:nil repeats:YES];
+    //[self performSelector:@selector(vibrateMacro3) withObject:nil afterDelay:4.0];
+    //[self performSelector:@selector(vibrateMacro4) withObject:nil afterDelay:6.0];
+    //[self endGame];
 }
 
 -(void)sendSetDataStreamingCommand {
@@ -184,9 +187,10 @@
         uint8_t accel = pow(accelerometerData.acceleration.x,2) +
                         pow(accelerometerData.acceleration.y,2) +
                         pow(accelerometerData.acceleration.z,2);
-        if (accel > 40)
+        if (accel > 60)
         {
             [self.currentTeam incrementShakesCount];
+            [self vibrateMacro4];
         }
         
     }
@@ -280,6 +284,7 @@
         {
             [self setCurrentTeam : self.redTeam];
         }
+        [RKAbortMacroCommand sendCommand];
         [RKRGBLEDOutputCommand sendCommandWithRed:1.0 green:1.0 blue:1.0];
         [RKRawMotorValuesCommand sendCommandWithLeftMode : RKRawMotorModeForward
                                                leftPower : (RKRawMotorPower) 255
@@ -316,6 +321,115 @@
     }
     [self performSelector:@selector(toggleLED) withObject:nil afterDelay:0.5];
 }
+
+- (void)vibrateMacro3
+{
+    if (!alarm)
+    {
+        //Create a new macro object to send to Sphero
+        RKMacroObject *macro = [RKMacroObject new];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeForward leftSpeed:128
+                                                  rightMode:RKRawMotorModeForward rightSpeed:128 delay:0]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeReverse leftSpeed:128
+                                                  rightMode:RKRawMotorModeReverse rightSpeed:128 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeForward leftSpeed:128
+                                                  rightMode:RKRawMotorModeForward rightSpeed:128 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeReverse leftSpeed:128
+                                                  rightMode:RKRawMotorModeReverse rightSpeed:128 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeForward leftSpeed:128
+                                                  rightMode:RKRawMotorModeForward rightSpeed:128 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeReverse leftSpeed:128
+                                                  rightMode:RKRawMotorModeReverse rightSpeed:128 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeForward leftSpeed:128
+                                                  rightMode:RKRawMotorModeForward rightSpeed:128 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeReverse leftSpeed:128
+                                                  rightMode:RKRawMotorModeReverse rightSpeed:128 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeForward leftSpeed:128
+                                                  rightMode:RKRawMotorModeForward rightSpeed:128 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeReverse leftSpeed:128
+                                                  rightMode:RKRawMotorModeReverse rightSpeed:128 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeForward leftSpeed:128
+                                                  rightMode:RKRawMotorModeForward rightSpeed:128 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeReverse leftSpeed:128
+                                                  rightMode:RKRawMotorModeReverse rightSpeed:128 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeForward leftSpeed:128
+                                                  rightMode:RKRawMotorModeForward rightSpeed:128 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeReverse leftSpeed:128
+                                                  rightMode:RKRawMotorModeReverse rightSpeed:128 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeForward leftSpeed:0
+                                                      rightMode:RKRawMotorModeForward rightSpeed:0 delay:25]];
+        
+        //Send full command down to Sphero to play
+        [macro playMacro];
+        //Release Macro
+        [macro release];
+    }
+}
+
+
+
+- (void)vibrateMacro4
+{
+    if (!alarm)
+    {
+        //Create a new macro object to send to Sphero
+        RKMacroObject *macro = [RKMacroObject new];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeForward leftSpeed:255
+                                                  rightMode:RKRawMotorModeForward rightSpeed:255 delay:0]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeReverse leftSpeed:255
+                                                  rightMode:RKRawMotorModeReverse rightSpeed:255 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeForward leftSpeed:255
+                                                  rightMode:RKRawMotorModeForward rightSpeed:255 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeReverse leftSpeed:255
+                                                  rightMode:RKRawMotorModeReverse rightSpeed:255 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeForward leftSpeed:255
+                                                  rightMode:RKRawMotorModeForward rightSpeed:255 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeReverse leftSpeed:255
+                                                  rightMode:RKRawMotorModeReverse rightSpeed:255 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeForward leftSpeed:255
+                                                  rightMode:RKRawMotorModeForward rightSpeed:255 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeReverse leftSpeed:255
+                                                  rightMode:RKRawMotorModeReverse rightSpeed:255 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeForward leftSpeed:255
+                                                  rightMode:RKRawMotorModeForward rightSpeed:255 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeReverse leftSpeed:255
+                                                  rightMode:RKRawMotorModeReverse rightSpeed:255 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeForward leftSpeed:255
+                                                  rightMode:RKRawMotorModeForward rightSpeed:255 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeReverse leftSpeed:255
+                                                  rightMode:RKRawMotorModeReverse rightSpeed:255 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeForward leftSpeed:255
+                                                  rightMode:RKRawMotorModeForward rightSpeed:255 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeReverse leftSpeed:255
+                                                  rightMode:RKRawMotorModeReverse rightSpeed:255 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeForward leftSpeed:255
+                                                  rightMode:RKRawMotorModeForward rightSpeed:255 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeReverse leftSpeed:255
+                                                  rightMode:RKRawMotorModeReverse rightSpeed:255 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeForward leftSpeed:255
+                                                  rightMode:RKRawMotorModeForward rightSpeed:255 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeReverse leftSpeed:255
+                                                  rightMode:RKRawMotorModeReverse rightSpeed:255 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeForward leftSpeed:255
+                                                  rightMode:RKRawMotorModeForward rightSpeed:255 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeReverse leftSpeed:255
+                                                  rightMode:RKRawMotorModeReverse rightSpeed:255 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeForward leftSpeed:255
+                                                  rightMode:RKRawMotorModeForward rightSpeed:255 delay:25]];
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeReverse leftSpeed:255
+                                                  rightMode:RKRawMotorModeReverse rightSpeed:255 delay:25]];
+        
+        
+        [macro addCommand:[RKMCRawMotor commandWithLeftMode:RKRawMotorModeReverse leftSpeed:0
+                                                  rightMode:RKRawMotorModeForward rightSpeed:0 delay:25]];
+        //Send full command down to Sphero to play
+        [macro playMacro];
+        //Release Macro
+        [macro release];
+    }
+}
+
+
 
 
 @end
