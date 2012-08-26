@@ -28,7 +28,9 @@
 
 - (void)dealloc
 {
-//    [_game release];
+    [_redTeam       release];
+    [_blueTeam      release];
+    [_currentTeam   release];
     [super dealloc];
 }
 
@@ -111,7 +113,12 @@
         [[RKDeviceMessenger sharedMessenger] addDataStreamingObserver:self selector:@selector(handleAsyncData:)];
     }
     robotOnline = YES;
-    [self startGame:60.0];
+    [timer invalidate];
+    timer = nil;
+    startGameTime1 = CFAbsoluteTimeGetCurrent();
+    alarm = NO;
+    [self changeTurn];
+    timer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(changeTurn) userInfo:nil repeats:YES];
 }
 
 -(void)sendSetDataStreamingCommand {
@@ -177,7 +184,7 @@
         uint8_t accel = pow(accelerometerData.acceleration.x,2) +
                         pow(accelerometerData.acceleration.y,2) +
                         pow(accelerometerData.acceleration.z,2);
-        if (accel > 20)
+        if (accel > 40)
         {
             [self.currentTeam incrementShakesCount];
         }
@@ -210,15 +217,17 @@
     if (!_blueTeam)
     {
         _blueTeam = [[Team alloc] init];
-        [_redTeam setR: 0.0];
-        [_redTeam setG: 0.0 ];
-        [_redTeam setB: 1.0 ];
+        [_blueTeam setR: 0.0];
+        [_blueTeam setG: 0.0];
+        [_blueTeam setB: 1.0];
     }
     return _blueTeam;
 }
 
 - (Team *) currentTeam
 {
+    if (!_currentTeam)
+        [self setCurrentTeam : self.redTeam];
     return _currentTeam;
 }
 
@@ -243,45 +252,26 @@
     }
 }
 
-- (void)takeTurn : (Team *) currentTeam
-                 : (double) waitTime    // time while ball is flashing (in sec)
-                 : (double) turnTime    // time while ball is solid color (in sec)
+-(void)changeTurn
 {
-    double startTurnTime = CFAbsoluteTimeGetCurrent();
-    double currentTurnTime = CFAbsoluteTimeGetCurrent();
-    
-    while ((currentTurnTime - startTurnTime) < waitTime)
-    {
-        // During this while loop, spin the ball and display white
-        [RKRGBLEDOutputCommand sendCommandWithRed:1.0 green:1.0 blue:1.0];
-        [RKRawMotorValuesCommand sendCommandWithLeftMode: RKRawMotorModeForward
-                                               leftPower:(RKRawMotorPower) 255
-                                               rightMode:RKRawMotorModeForward
-                                              rightPower:(RKRawMotorPower) 255];
-        currentTurnTime = CFAbsoluteTimeGetCurrent();
-    }
-    while ((currentTurnTime - startTurnTime) < (waitTime + turnTime))
-    {
-        // During this while loop, color should be steady in the current team's color
-        [RKRGBLEDOutputCommand sendCommandWithRed:currentTeam.r green:currentTeam.g blue:currentTeam.b];
-        [RKRawMotorValuesCommand sendCommandWithLeftMode: RKRawMotorModeForward
-                                               leftPower:(RKRawMotorPower) 0
-                                               rightMode:RKRawMotorModeForward
-                                              rightPower:(RKRawMotorPower) 0];
-        currentTurnTime = CFAbsoluteTimeGetCurrent();
-    }
-}
-
-- (void)startGame : (double) totalGameTime
-{
-    
-    double startGameTime = CFAbsoluteTimeGetCurrent();
     double currentGameTime = CFAbsoluteTimeGetCurrent();
-    [self setCurrentTeam : self.redTeam];
-    
-    while ((currentGameTime - startGameTime) < totalGameTime)
+    if ((currentGameTime - startGameTime1) > 60.0)
     {
-        [self takeTurn: self.currentTeam : 5.0 : 5.0];
+        [self endGame];
+        return;
+    }
+    
+    if (alarm)
+    {
+        [RKRGBLEDOutputCommand sendCommandWithRed:self.currentTeam.r green:self.currentTeam.g blue:self.currentTeam.b];
+        [RKRawMotorValuesCommand sendCommandWithLeftMode : RKRawMotorModeForward
+                                               leftPower : (RKRawMotorPower) 0
+                                               rightMode : RKRawMotorModeForward
+                                              rightPower : (RKRawMotorPower) 0];
+        alarm = NO;
+    }
+    else
+    {
         if (self.currentTeam == self.redTeam)
         {
             [self setCurrentTeam : self.blueTeam];
@@ -290,10 +280,26 @@
         {
             [self setCurrentTeam : self.redTeam];
         }
-        currentGameTime = CFAbsoluteTimeGetCurrent();
+        [RKRGBLEDOutputCommand sendCommandWithRed:1.0 green:1.0 blue:1.0];
+        [RKRawMotorValuesCommand sendCommandWithLeftMode : RKRawMotorModeForward
+                                               leftPower : (RKRawMotorPower) 255
+                                               rightMode : RKRawMotorModeForward
+                                              rightPower : (RKRawMotorPower) 255];
+        alarm = YES;
     }
+}
+
+- (void)endGame
+{
     [self decideWinner];
     [self toggleLED];
+    [timer invalidate];
+    
+    // Unregister for async data packets
+    [[RKDeviceMessenger sharedMessenger] removeDataStreamingObserver:self];
+    
+    // Restore stabilization (the control unit)
+    [RKStabilizationCommand sendCommandWithState:RKStabilizationStateOn];
 }
 
 - (void)toggleLED
@@ -307,9 +313,8 @@
         [RKRGBLEDOutputCommand sendCommandWithRed:self.currentTeam.r
                                             green:self.currentTeam.g
                                              blue:self.currentTeam.b];
-        //[self toggleLED:whiteBool];
-        [self performSelector:@selector(toggleLED:) withObject:nil afterDelay:0.5];
     }
+    [self performSelector:@selector(toggleLED) withObject:nil afterDelay:0.5];
 }
 
 

@@ -15,6 +15,11 @@
     BOOL robotOnline;
     BOOL ledON;
     int  packetCounter;
+    NSTimer *timer; // timer for game
+    int secondsCount; // time for game play
+    IBOutlet UILabel *countdownLabel; // label on screen for timer
+    double startGameTime1;
+    BOOL alarm;
 }
 
 @property (nonatomic, retain) IBOutlet UILabel *redShakesValueLabel;
