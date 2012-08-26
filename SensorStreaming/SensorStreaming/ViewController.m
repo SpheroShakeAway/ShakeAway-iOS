@@ -25,6 +25,20 @@
 @synthesize q2ValueLabel;
 @synthesize q3ValueLabel;
 
+@synthesize redShakesValueLabel;
+@synthesize blueShakesValueLabel;
+
+@synthesize game = _game;
+
+- (Game *)game
+{
+    if (!_game)
+    {
+        _game = [[Game alloc] init];
+    }
+    return _game;
+}
+
 - (void)dealloc
 {
     [xValueLabel release];
@@ -74,6 +88,9 @@
     self.q1ValueLabel = nil;
     self.q2ValueLabel = nil;
     self.q3ValueLabel = nil;
+    
+    self.redShakesValueLabel = nil;
+    self.blueShakesValueLabel = nil;
 }
 
 
@@ -126,6 +143,7 @@
         [[RKDeviceMessenger sharedMessenger] addDataStreamingObserver:self selector:@selector(handleAsyncData:)];
     }
     robotOnline = YES;
+    [self.game startGame:60.0];
 }
 
 -(void)sendSetDataStreamingCommand {
@@ -196,6 +214,18 @@
         self.q1ValueLabel.text = [NSString stringWithFormat:@"%d", quaternionData.quaternions.q1];
         self.q2ValueLabel.text = [NSString stringWithFormat:@"%d", quaternionData.quaternions.q2];
         self.q3ValueLabel.text = [NSString stringWithFormat:@"%d", quaternionData.quaternions.q3];
+        
+        //self.redShakesValueLabel.text = [NSString stringWithFormat:@"%d", game.redTeam.shakesCount];
+        //self.blueShakesValueLabel.text = [NSString stringWithFormat:@"%d", game.blueTeam.shakesCount];
+
+        /*
+        uint8_t accel = pow(accelerometerData.acceleration.x,2) +
+                        pow(accelerometerData.acceleration.y,2) +
+                        pow(accelerometerData.acceleration.z,2);
+        if (accel > 20) {
+            ++shakesCount;
+        }
+         */
     }
 }
 

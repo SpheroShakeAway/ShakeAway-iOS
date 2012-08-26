@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Game.h"
 
 @class RKDeviceAsyncData;
 
@@ -32,6 +33,11 @@
 @property (retain, nonatomic) IBOutlet UILabel *q1ValueLabel;
 @property (retain, nonatomic) IBOutlet UILabel *q2ValueLabel;
 @property (retain, nonatomic) IBOutlet UILabel *q3ValueLabel;
+
+@property (nonatomic, retain) IBOutlet UILabel *redShakesValueLabel;
+@property (nonatomic, retain) IBOutlet UILabel *blueShakesValueLabel;
+
+@property (nonatomic, strong) Game *game;
 
 -(void)setupRobotConnection;
 -(void)handleRobotOnline;

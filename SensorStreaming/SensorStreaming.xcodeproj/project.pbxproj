@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37425AA815E7D39C00323023 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 37425AA715E7D39C00323023 /* Game.m */; };
+		37425AAC15E7D3F100323023 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = 37425AAB15E7D3F100323023 /* Team.m */; };
 		67DCBCA415DC1E7400FBA6A5 /* RobotKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DCBCA315DC1E7400FBA6A5 /* RobotKit.framework */; };
 		81EE34421491452A00132035 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EE34411491452A00132035 /* UIKit.framework */; };
 		81EE34441491452A00132035 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EE34431491452A00132035 /* Foundation.framework */; };
@@ -24,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37425AA615E7D39C00323023 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		37425AA715E7D39C00323023 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		37425AAA15E7D3F100323023 /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
+		37425AAB15E7D3F100323023 /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
 		67DCBCA315DC1E7400FBA6A5 /* RobotKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RobotKit.framework; path = SensorStreaming/Frameworks/RobotKit.framework; sourceTree = "<group>"; };
 		81EE343D1491452A00132035 /* SensorStreaming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensorStreaming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81EE34411491452A00132035 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -105,6 +111,10 @@
 				81EE34641491452B00132035 /* ViewController_iPhone.xib */,
 				81EE34671491452B00132035 /* ViewController_iPad.xib */,
 				81EE344E1491452A00132035 /* Supporting Files */,
+				37425AA615E7D39C00323023 /* Game.h */,
+				37425AA715E7D39C00323023 /* Game.m */,
+				37425AAA15E7D3F100323023 /* Team.h */,
+				37425AAB15E7D3F100323023 /* Team.m */,
 			);
 			path = SensorStreaming;
 			sourceTree = "<group>";
@@ -188,6 +198,8 @@
 				81EE34541491452A00132035 /* main.m in Sources */,
 				81EE34581491452A00132035 /* AppDelegate.m in Sources */,
 				81EE34631491452B00132035 /* ViewController.m in Sources */,
+				37425AA815E7D39C00323023 /* Game.m in Sources */,
+				37425AAC15E7D3F100323023 /* Team.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
