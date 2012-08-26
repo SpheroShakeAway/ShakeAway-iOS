@@ -11,46 +11,24 @@
 
 #define TOTAL_PACKET_COUNT 200
 #define PACKET_COUNT_THRESHOLD 50
+@interface ViewController()
+@property (nonatomic, strong) Team *redTeam;
+@property (nonatomic, strong) Team *blueTeam;
+@property (nonatomic, strong) Team *currentTeam;
+@end
 
 @implementation ViewController
 
-@synthesize xValueLabel;
-@synthesize yValueLabel;
-@synthesize zValueLabel;
-@synthesize pitchValueLabel;
-@synthesize rollValueLabel;
-@synthesize yawValueLabel;
-@synthesize q0ValueLabel;
-@synthesize q1ValueLabel;
-@synthesize q2ValueLabel;
-@synthesize q3ValueLabel;
+@synthesize redTeam     = _redTeam;
+@synthesize blueTeam    = _blueTeam;
+@synthesize currentTeam = _currentTeam;
 
 @synthesize redShakesValueLabel;
 @synthesize blueShakesValueLabel;
 
-@synthesize game = _game;
-
-- (Game *)game
-{
-    if (!_game)
-    {
-        _game = [[Game alloc] init];
-    }
-    return _game;
-}
-
 - (void)dealloc
 {
-    [xValueLabel release];
-    [yValueLabel release];
-    [zValueLabel release];
-    [pitchValueLabel release];
-    [rollValueLabel release];
-    [yawValueLabel release];
-    [q0ValueLabel release];
-    [q1ValueLabel release];
-    [q2ValueLabel release];
-    [q3ValueLabel release];
+//    [_game release];
     [super dealloc];
 }
 
@@ -78,16 +56,6 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    self.xValueLabel = nil;
-    self.yValueLabel = nil;
-    self.zValueLabel = nil;
-    self.pitchValueLabel = nil;
-    self.rollValueLabel = nil;
-    self.yawValueLabel = nil;
-    self.q0ValueLabel = nil;
-    self.q1ValueLabel = nil;
-    self.q2ValueLabel = nil;
-    self.q3ValueLabel = nil;
     
     self.redShakesValueLabel = nil;
     self.blueShakesValueLabel = nil;
@@ -143,7 +111,7 @@
         [[RKDeviceMessenger sharedMessenger] addDataStreamingObserver:self selector:@selector(handleAsyncData:)];
     }
     robotOnline = YES;
-    [self.game startGame:60.0];
+    [self startGame:60.0];
 }
 
 -(void)sendSetDataStreamingCommand {
@@ -200,32 +168,20 @@
         RKDeviceSensorsAsyncData *sensorsAsyncData = (RKDeviceSensorsAsyncData *)asyncData;
         RKDeviceSensorsData *sensorsData = [sensorsAsyncData.dataFrames lastObject];
         RKAccelerometerData *accelerometerData = sensorsData.accelerometerData;
-        RKAttitudeData *attitudeData = sensorsData.attitudeData;
-        RKQuaternionData *quaternionData = sensorsData.quaternionData;
         
         // Print data to the text fields
-        self.xValueLabel.text = [NSString stringWithFormat:@"%.6f", accelerometerData.acceleration.x];
-        self.yValueLabel.text = [NSString stringWithFormat:@"%.6f", accelerometerData.acceleration.y];
-        self.zValueLabel.text = [NSString stringWithFormat:@"%.6f", accelerometerData.acceleration.z];
-        self.pitchValueLabel.text = [NSString stringWithFormat:@"%.0f", attitudeData.pitch];
-        self.rollValueLabel.text = [NSString stringWithFormat:@"%.0f", attitudeData.roll];
-        self.yawValueLabel.text = [NSString stringWithFormat:@"%.0f", attitudeData.yaw];
-        self.q0ValueLabel.text = [NSString stringWithFormat:@"%d", quaternionData.quaternions.q0];
-        self.q1ValueLabel.text = [NSString stringWithFormat:@"%d", quaternionData.quaternions.q1];
-        self.q2ValueLabel.text = [NSString stringWithFormat:@"%d", quaternionData.quaternions.q2];
-        self.q3ValueLabel.text = [NSString stringWithFormat:@"%d", quaternionData.quaternions.q3];
         
-        //self.redShakesValueLabel.text = [NSString stringWithFormat:@"%d", game.redTeam.shakesCount];
-        //self.blueShakesValueLabel.text = [NSString stringWithFormat:@"%d", game.blueTeam.shakesCount];
-
-        /*
+        self.redShakesValueLabel.text  = [NSString stringWithFormat:@"%d", self.redTeam.shakesCount];
+        self.blueShakesValueLabel.text = [NSString stringWithFormat:@"%d", self.blueTeam.shakesCount];
+        
         uint8_t accel = pow(accelerometerData.acceleration.x,2) +
                         pow(accelerometerData.acceleration.y,2) +
                         pow(accelerometerData.acceleration.z,2);
-        if (accel > 20) {
-            ++shakesCount;
+        if (accel > 20)
+        {
+            [self.currentTeam incrementShakesCount];
         }
-         */
+        
     }
 }
 
@@ -236,5 +192,125 @@
         [[RKRobotProvider sharedRobotProvider] openRobotConnection];        
     }
 }
+
+- (Team *)redTeam
+{
+    if (!_redTeam)
+    {
+        _redTeam = [[Team alloc] init];
+        [_redTeam setR: 1.0];
+        [_redTeam setG: 0.0];
+        [_redTeam setB: 0.0];
+    }
+    return _redTeam;
+}
+
+- (Team *) blueTeam
+{
+    if (!_blueTeam)
+    {
+        _blueTeam = [[Team alloc] init];
+        [_redTeam setR: 0.0];
+        [_redTeam setG: 0.0 ];
+        [_redTeam setB: 1.0 ];
+    }
+    return _blueTeam;
+}
+
+- (Team *) currentTeam
+{
+    return _currentTeam;
+}
+
+- (void) setCurrentTeam:(Team *)team
+{
+    _currentTeam = team;
+}
+
+- (void)decideWinner
+{
+    if (self.redTeam.shakesCount > self.blueTeam.shakesCount)
+    {
+        [self setCurrentTeam:self.redTeam];
+    }
+    else if (self.redTeam.shakesCount < self.blueTeam.shakesCount)
+    {
+        [self setCurrentTeam:self.blueTeam];
+    }
+    else
+    {
+        // Tie
+    }
+}
+
+- (void)takeTurn : (Team *) currentTeam
+                 : (double) waitTime    // time while ball is flashing (in sec)
+                 : (double) turnTime    // time while ball is solid color (in sec)
+{
+    double startTurnTime = CFAbsoluteTimeGetCurrent();
+    double currentTurnTime = CFAbsoluteTimeGetCurrent();
+    
+    while ((currentTurnTime - startTurnTime) < waitTime)
+    {
+        // During this while loop, spin the ball and display white
+        [RKRGBLEDOutputCommand sendCommandWithRed:1.0 green:1.0 blue:1.0];
+        [RKRawMotorValuesCommand sendCommandWithLeftMode: RKRawMotorModeForward
+                                               leftPower:(RKRawMotorPower) 255
+                                               rightMode:RKRawMotorModeForward
+                                              rightPower:(RKRawMotorPower) 255];
+        currentTurnTime = CFAbsoluteTimeGetCurrent();
+    }
+    while ((currentTurnTime - startTurnTime) < (waitTime + turnTime))
+    {
+        // During this while loop, color should be steady in the current team's color
+        [RKRGBLEDOutputCommand sendCommandWithRed:currentTeam.r green:currentTeam.g blue:currentTeam.b];
+        [RKRawMotorValuesCommand sendCommandWithLeftMode: RKRawMotorModeForward
+                                               leftPower:(RKRawMotorPower) 0
+                                               rightMode:RKRawMotorModeForward
+                                              rightPower:(RKRawMotorPower) 0];
+        currentTurnTime = CFAbsoluteTimeGetCurrent();
+    }
+}
+
+- (void)startGame : (double) totalGameTime
+{
+    
+    double startGameTime = CFAbsoluteTimeGetCurrent();
+    double currentGameTime = CFAbsoluteTimeGetCurrent();
+    [self setCurrentTeam : self.redTeam];
+    
+    while ((currentGameTime - startGameTime) < totalGameTime)
+    {
+        [self takeTurn: self.currentTeam : 5.0 : 5.0];
+        if (self.currentTeam == self.redTeam)
+        {
+            [self setCurrentTeam : self.blueTeam];
+        }
+        else
+        {
+            [self setCurrentTeam : self.redTeam];
+        }
+        currentGameTime = CFAbsoluteTimeGetCurrent();
+    }
+    [self decideWinner];
+    [self toggleLED];
+}
+
+- (void)toggleLED
+{
+    /*Toggle the LED on and off*/
+    if (ledON) {
+        ledON = NO;
+        [RKRGBLEDOutputCommand sendCommandWithRed:0.0 green:0.0 blue:0.0];
+    } else {
+        ledON = YES;
+        [RKRGBLEDOutputCommand sendCommandWithRed:self.currentTeam.r
+                                            green:self.currentTeam.g
+                                             blue:self.currentTeam.b];
+        //[self toggleLED:whiteBool];
+        [self performSelector:@selector(toggleLED:) withObject:nil afterDelay:0.5];
+    }
+}
+
 
 @end

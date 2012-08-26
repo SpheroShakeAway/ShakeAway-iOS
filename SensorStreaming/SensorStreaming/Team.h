@@ -15,4 +15,6 @@
 @property (nonatomic) double g;
 @property (nonatomic) double b;
 
+- (void) incrementShakesCount;
+
 @end

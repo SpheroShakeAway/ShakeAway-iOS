@@ -7,37 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Game.h"
+#import "Team.h"
 
 @class RKDeviceAsyncData;
 
 @interface ViewController : UIViewController {
     BOOL robotOnline;
+    BOOL ledON;
     int  packetCounter;
-    
-    UILabel *xValueLabel;
-    UILabel *yValueLabel;
-    UILabel *zValueLabel;
-    UILabel *pitchValueLabel;
-    UILabel *rollValueLabel;
-    UILabel *yawValueLabel;
 }
-
-@property (nonatomic, retain) IBOutlet UILabel *xValueLabel;
-@property (nonatomic, retain) IBOutlet UILabel *yValueLabel;
-@property (nonatomic, retain) IBOutlet UILabel *zValueLabel;
-@property (nonatomic, retain) IBOutlet UILabel *pitchValueLabel;
-@property (nonatomic, retain) IBOutlet UILabel *rollValueLabel;
-@property (nonatomic, retain) IBOutlet UILabel *yawValueLabel;
-@property (retain, nonatomic) IBOutlet UILabel *q0ValueLabel;
-@property (retain, nonatomic) IBOutlet UILabel *q1ValueLabel;
-@property (retain, nonatomic) IBOutlet UILabel *q2ValueLabel;
-@property (retain, nonatomic) IBOutlet UILabel *q3ValueLabel;
 
 @property (nonatomic, retain) IBOutlet UILabel *redShakesValueLabel;
 @property (nonatomic, retain) IBOutlet UILabel *blueShakesValueLabel;
-
-@property (nonatomic, strong) Game *game;
 
 -(void)setupRobotConnection;
 -(void)handleRobotOnline;
