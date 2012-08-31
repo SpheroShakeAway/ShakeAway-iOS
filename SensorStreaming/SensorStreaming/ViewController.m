@@ -181,7 +181,9 @@
         // Print data to the text fields
         
         self.redShakesValueLabel.text  = [NSString stringWithFormat:@"%d", self.redTeam.shakesCount];
+        self.redShakesValueLabel.font = [UIFont fontWithName:@"Sullivan-Fill" size:100.0];
         self.blueShakesValueLabel.text = [NSString stringWithFormat:@"%d", self.blueTeam.shakesCount];
+        self.blueShakesValueLabel.font = [UIFont fontWithName:@"Sullivan-Fill" size:100.0];
         
         uint8_t accel = pow(accelerometerData.acceleration.x,2) +
                         pow(accelerometerData.acceleration.y,2) +
@@ -258,6 +260,7 @@
 -(void) updateTimer
 {
     self.countdownLabel.text  = [NSString stringWithFormat:@"%d", remainingSeconds];
+    self.countdownLabel.font = [UIFont fontWithName:@"Sullivan-Fill" size:50.0];
     if (remainingSeconds <= 0)
     {
         [self endGame];
