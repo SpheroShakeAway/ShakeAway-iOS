@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17640C2915F326760076A990 /* InstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17640C2715F326760076A990 /* InstructionsViewController.m */; };
+		17640C2A15F326760076A990 /* InstructionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17640C2815F326760076A990 /* InstructionsViewController.xib */; };
+		17640C3315F327F30076A990 /* GameSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17640C3115F327F20076A990 /* GameSettingsViewController.m */; };
+		17640C3415F327F30076A990 /* GameSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17640C3215F327F30076A990 /* GameSettingsViewController.xib */; };
+		17640C3815F3280D0076A990 /* HomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17640C3615F3280B0076A990 /* HomeScreenViewController.m */; };
+		17640C3915F3280D0076A990 /* HomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17640C3715F3280C0076A990 /* HomeScreenViewController.xib */; };
 		37425AAC15E7D3F100323023 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = 37425AAB15E7D3F100323023 /* Team.m */; };
 		374767BC15F0B2AC00DF6D91 /* General-Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 374767BA15F0B2AC00DF6D91 /* General-Background.png */; };
 		374767BD15F0B2AC00DF6D91 /* General-Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 374767BB15F0B2AC00DF6D91 /* General-Background@2x.png */; };
@@ -104,6 +110,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17640C2615F326760076A990 /* InstructionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstructionsViewController.h; path = SensorStreaming/InstructionsViewController.h; sourceTree = "<group>"; };
+		17640C2715F326760076A990 /* InstructionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstructionsViewController.m; path = SensorStreaming/InstructionsViewController.m; sourceTree = "<group>"; };
+		17640C2815F326760076A990 /* InstructionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InstructionsViewController.xib; path = SensorStreaming/InstructionsViewController.xib; sourceTree = "<group>"; };
+		17640C3015F327F20076A990 /* GameSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSettingsViewController.h; sourceTree = "<group>"; };
+		17640C3115F327F20076A990 /* GameSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSettingsViewController.m; sourceTree = "<group>"; };
+		17640C3215F327F30076A990 /* GameSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameSettingsViewController.xib; sourceTree = "<group>"; };
+		17640C3515F3280B0076A990 /* HomeScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScreenViewController.h; sourceTree = "<group>"; };
+		17640C3615F3280B0076A990 /* HomeScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScreenViewController.m; sourceTree = "<group>"; };
+		17640C3715F3280C0076A990 /* HomeScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeScreenViewController.xib; sourceTree = "<group>"; };
 		37425AAA15E7D3F100323023 /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
 		37425AAB15E7D3F100323023 /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
 		374767BA15F0B2AC00DF6D91 /* General-Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "General-Background.png"; sourceTree = "<group>"; };
@@ -355,6 +370,9 @@
 		81EE34321491452A00132035 = {
 			isa = PBXGroup;
 			children = (
+				17640C2615F326760076A990 /* InstructionsViewController.h */,
+				17640C2715F326760076A990 /* InstructionsViewController.m */,
+				17640C2815F326760076A990 /* InstructionsViewController.xib */,
 				37572D1A15F2D51B00D80B39 /* App-Icon@2x.png */,
 				37572D1815F2D51400D80B39 /* App-Icon.png */,
 				37572D7415F2F4E000D80B39 /* App-Icon-iPad.png */,
@@ -403,6 +421,12 @@
 				81EE344E1491452A00132035 /* Supporting Files */,
 				37425AAA15E7D3F100323023 /* Team.h */,
 				37425AAB15E7D3F100323023 /* Team.m */,
+				17640C3015F327F20076A990 /* GameSettingsViewController.h */,
+				17640C3115F327F20076A990 /* GameSettingsViewController.m */,
+				17640C3215F327F30076A990 /* GameSettingsViewController.xib */,
+				17640C3515F3280B0076A990 /* HomeScreenViewController.h */,
+				17640C3615F3280B0076A990 /* HomeScreenViewController.m */,
+				17640C3715F3280C0076A990 /* HomeScreenViewController.xib */,
 			);
 			path = SensorStreaming;
 			sourceTree = "<group>";
@@ -552,6 +576,9 @@
 				37572D9915F303DA00D80B39 /* Instruction-PG-4@2x.png in Resources */,
 				37572D9A15F303DA00D80B39 /* Instruction-PG-5.png in Resources */,
 				37572D9B15F303DA00D80B39 /* Instruction-PG-5@2x.png in Resources */,
+				17640C2A15F326760076A990 /* InstructionsViewController.xib in Resources */,
+				17640C3415F327F30076A990 /* GameSettingsViewController.xib in Resources */,
+				17640C3915F3280D0076A990 /* HomeScreenViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +593,9 @@
 				81EE34581491452A00132035 /* AppDelegate.m in Sources */,
 				81EE34631491452B00132035 /* ViewController.m in Sources */,
 				37425AAC15E7D3F100323023 /* Team.m in Sources */,
+				17640C2915F326760076A990 /* InstructionsViewController.m in Sources */,
+				17640C3315F327F30076A990 /* GameSettingsViewController.m in Sources */,
+				17640C3815F3280D0076A990 /* HomeScreenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
