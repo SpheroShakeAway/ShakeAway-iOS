@@ -19,12 +19,12 @@
 @synthesize g = _g;
 @synthesize b = _b;
 
-- (void)setShakesCount:(uint8_t)count
+- (void)setShakesCount:(int)count
 {
     _shakesCount = count;
 }
 
--(uint8_t) shakesCount
+-(int) shakesCount
 {
     if (!_shakesCount)
         _shakesCount = 0;

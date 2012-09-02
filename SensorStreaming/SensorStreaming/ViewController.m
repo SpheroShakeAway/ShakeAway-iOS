@@ -55,11 +55,17 @@
     /*Only start the blinking loop when the view loads*/
     robotOnline = NO;
     
+    gameLength = 120; // CHANGE BASED ON SETTINGS
+    turnLength = 20; // CHANGE BASED ON SETTINGS
+    
+    remainingSeconds = gameLength;
+    
     self.redShakesValueLabel.text  = [NSString stringWithFormat:@"%d", self.redTeam.shakesCount];
     self.redShakesValueLabel.font = [UIFont fontWithName:@"Sullivan-Fill" size:100.0];
     self.blueShakesValueLabel.text = [NSString stringWithFormat:@"%d", self.blueTeam.shakesCount];
     self.blueShakesValueLabel.font = [UIFont fontWithName:@"Sullivan-Fill" size:100.0];
-    self.countdownLabel.text  = [NSString stringWithFormat:@"%d", remainingSeconds];
+
+    self.countdownLabel.text = [self getString: remainingSeconds];
     self.countdownLabel.font = [UIFont fontWithName:@"Sullivan-Fill" size:50.0];
 }
 
@@ -69,18 +75,34 @@
     
     self.redShakesValueLabel = nil;
     self.blueShakesValueLabel = nil;
+    self.countdownLabel = nil;
+    
+    /*When the application is entering the background we need to close the connection to the robot*/
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:RKDeviceConnectionOnlineNotification object:nil];
+    
+    // Turn off data streaming
+    [RKSetDataStreamingCommand sendCommandWithSampleRateDivisor:0
+                                                   packetFrames:0
+                                                     sensorMask:RKDataStreamingMaskOff
+                                                    packetCount:0];
+    // Unregister for async data packets
+    [[RKDeviceMessenger sharedMessenger] removeDataStreamingObserver:self];
+    
+    // Restore stabilization (the control unit)
+    [RKStabilizationCommand sendCommandWithState:RKStabilizationStateOn];
+    
+    // Close the connection
+    [[RKRobotProvider sharedRobotProvider] closeRobotConnection];
+    
+    robotOnline = NO;
 }
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return ((interfaceOrientation == UIInterfaceOrientationLandscapeLeft) ||
-                (interfaceOrientation == UIInterfaceOrientationLandscapeRight));
-    } else {
-        return YES;
-    }
+    return ((interfaceOrientation == UIInterfaceOrientationLandscapeLeft) ||
+            (interfaceOrientation == UIInterfaceOrientationLandscapeRight));
 }
 
 -(void)appWillResignActive:(NSNotification*)notification {
@@ -126,7 +148,7 @@
     timer = nil;
     startGameTime1 = CFAbsoluteTimeGetCurrent();
     alarm = NO;
-    remainingSeconds = 60;
+    
     [self updateTimer];
     timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
 }
@@ -196,7 +218,7 @@
         uint8_t accel = pow(accelerometerData.acceleration.x,2) +
                         pow(accelerometerData.acceleration.y,2) +
                         pow(accelerometerData.acceleration.z,2);
-        if (accel > 60)
+        if (accel > 70.0)
         {
             [self.currentTeam incrementShakesCount];
             [self vibrateMacro];
@@ -267,14 +289,15 @@
 
 -(void) updateTimer
 {
-    self.countdownLabel.text  = [NSString stringWithFormat:@"%d", remainingSeconds];
+    self.countdownLabel.text = [self getString:remainingSeconds];
     self.countdownLabel.font = [UIFont fontWithName:@"Sullivan-Fill" size:50.0];
     if (remainingSeconds <= 0)
     {
         [self endGame];
         return;
     }
-    if ((remainingSeconds % 5) == 0)
+    if ((((gameLength - remainingSeconds) % turnLength) == 0) ||
+        (((gameLength - remainingSeconds - 5) % turnLength) == 0))
     {
         [self changeTurn];
     }
@@ -368,6 +391,10 @@
 }
 
 
+- (NSString*)getString: (int) time
+{
+    return [NSString stringWithFormat:@"%d:%.2d", (time / 60), (time % 60)];
+}
 
 
 @end

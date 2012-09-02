@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:SensorStreaming.xcodeproj">
+      location = "self:Sphero H20.xcodeproj">
    </FileRef>
 </Workspace>
