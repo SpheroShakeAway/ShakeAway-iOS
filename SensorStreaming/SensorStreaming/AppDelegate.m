@@ -13,26 +13,26 @@
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize viewController = _viewController;
+//@synthesize viewController = _viewController;
 
 - (void)dealloc
 {
     [_window release];
-    [_viewController release];
+//    [_viewController release];
     [super dealloc];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+//    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[[HomeScreenViewController alloc] initWithNibName:@"HomeScreenViewController_iPhone" bundle:nil] autorelease];
-    } else {
-        self.viewController = [[[ViewController alloc] initWithNibName:@"HomeScreenViewController_iPad" bundle:nil] autorelease];
-    }
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
+//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+//        self.viewController = [[[HomeScreenViewController alloc] initWithNibName:@"HomeScreenViewController_iPhone" bundle:nil] autorelease];
+//    } else {
+//        self.viewController = [[[ViewController alloc] initWithNibName:@"HomeScreenViewController_iPad" bundle:nil] autorelease];
+//    }
+//    self.window.rootViewController = self.viewController;
+//    [self.window makeKeyAndVisible];
     return YES;
 }
 

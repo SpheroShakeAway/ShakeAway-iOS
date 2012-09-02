@@ -52,6 +52,10 @@
 	<array>
 		<string>Sullivan-Fill.otf</string>
 	</array>
+	<key>UIMainStoryboardFile</key>
+	<string>iPhone</string>
+	<key>UIMainStoryboardFile~ipad</key>
+	<string>iPad</string>
 	<key>UIPrerenderedIcon</key>
 	<true/>
 	<key>UIRequiredDeviceCapabilities</key>
