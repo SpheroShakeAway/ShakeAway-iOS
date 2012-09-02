@@ -49,10 +49,6 @@
 		37572D3515F2E8A000D80B39 /* Start-Button-Clicked-State@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D2715F2E8A000D80B39 /* Start-Button-Clicked-State@2x.png */; };
 		37572D3615F2E8A000D80B39 /* Start-Button-Normal-State.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D2815F2E8A000D80B39 /* Start-Button-Normal-State.png */; };
 		37572D3715F2E8A000D80B39 /* Start-Button-Normal-State@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D2915F2E8A000D80B39 /* Start-Button-Normal-State@2x.png */; };
-		37572D3C15F2EA3600D80B39 /* Back-Button-Active-State.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D3815F2EA3600D80B39 /* Back-Button-Active-State.png */; };
-		37572D3D15F2EA3600D80B39 /* Back-Button-Active-State@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D3915F2EA3600D80B39 /* Back-Button-Active-State@2x.png */; };
-		37572D3E15F2EA3600D80B39 /* Back-Button-Normal-State.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D3A15F2EA3600D80B39 /* Back-Button-Normal-State.png */; };
-		37572D3F15F2EA3600D80B39 /* Back-Button-Normal-State@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D3B15F2EA3600D80B39 /* Back-Button-Normal-State@2x.png */; };
 		37572D4615F2EA4900D80B39 /* Number-Background-Not-Selected-State.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D4015F2EA4900D80B39 /* Number-Background-Not-Selected-State.png */; };
 		37572D4715F2EA4900D80B39 /* Number-Background-Not-Selected-State@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D4115F2EA4900D80B39 /* Number-Background-Not-Selected-State@2x.png */; };
 		37572D4815F2EA4900D80B39 /* Number-Background-Selected-State-BLUE.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D4215F2EA4900D80B39 /* Number-Background-Selected-State-BLUE.png */; };
@@ -71,10 +67,6 @@
 		37572D6115F2EAE000D80B39 /* Countdown-Box@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D5D15F2EAE000D80B39 /* Countdown-Box@2x.png */; };
 		37572D6215F2EAE000D80B39 /* Game-Start_Countdown-Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D5E15F2EAE000D80B39 /* Game-Start_Countdown-Background.png */; };
 		37572D6315F2EAE000D80B39 /* Game-Start_Countdown-Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D5F15F2EAE000D80B39 /* Game-Start_Countdown-Background@2x.png */; };
-		37572D6815F2EB1E00D80B39 /* Back-Button-Active-State.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D6415F2EB1E00D80B39 /* Back-Button-Active-State.png */; };
-		37572D6915F2EB1E00D80B39 /* Back-Button-Active-State@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D6515F2EB1E00D80B39 /* Back-Button-Active-State@2x.png */; };
-		37572D6A15F2EB1E00D80B39 /* Back-Button-Normal-State.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D6615F2EB1E00D80B39 /* Back-Button-Normal-State.png */; };
-		37572D6B15F2EB1E00D80B39 /* Back-Button-Normal-State@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D6715F2EB1E00D80B39 /* Back-Button-Normal-State@2x.png */; };
 		37572D7015F2EB6500D80B39 /* Winner-BLUE.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D6C15F2EB6500D80B39 /* Winner-BLUE.png */; };
 		37572D7115F2EB6500D80B39 /* Winner-BLUE@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D6D15F2EB6500D80B39 /* Winner-BLUE@2x.png */; };
 		37572D7215F2EB6500D80B39 /* Winner-RED.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D6E15F2EB6500D80B39 /* Winner-RED.png */; };
@@ -534,7 +526,7 @@
 		81EE34341491452A00132035 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = "Orbotix, Inc.";
 			};
 			buildConfigurationList = 81EE34371491452A00132035 /* Build configuration list for PBXProject "SensorStreaming" */;
@@ -596,10 +588,6 @@
 				37572D3515F2E8A000D80B39 /* Start-Button-Clicked-State@2x.png in Resources */,
 				37572D3615F2E8A000D80B39 /* Start-Button-Normal-State.png in Resources */,
 				37572D3715F2E8A000D80B39 /* Start-Button-Normal-State@2x.png in Resources */,
-				37572D3C15F2EA3600D80B39 /* Back-Button-Active-State.png in Resources */,
-				37572D3D15F2EA3600D80B39 /* Back-Button-Active-State@2x.png in Resources */,
-				37572D3E15F2EA3600D80B39 /* Back-Button-Normal-State.png in Resources */,
-				37572D3F15F2EA3600D80B39 /* Back-Button-Normal-State@2x.png in Resources */,
 				37572D4615F2EA4900D80B39 /* Number-Background-Not-Selected-State.png in Resources */,
 				37572D4715F2EA4900D80B39 /* Number-Background-Not-Selected-State@2x.png in Resources */,
 				37572D4815F2EA4900D80B39 /* Number-Background-Selected-State-BLUE.png in Resources */,
@@ -618,10 +606,6 @@
 				37572D6115F2EAE000D80B39 /* Countdown-Box@2x.png in Resources */,
 				37572D6215F2EAE000D80B39 /* Game-Start_Countdown-Background.png in Resources */,
 				37572D6315F2EAE000D80B39 /* Game-Start_Countdown-Background@2x.png in Resources */,
-				37572D6815F2EB1E00D80B39 /* Back-Button-Active-State.png in Resources */,
-				37572D6915F2EB1E00D80B39 /* Back-Button-Active-State@2x.png in Resources */,
-				37572D6A15F2EB1E00D80B39 /* Back-Button-Normal-State.png in Resources */,
-				37572D6B15F2EB1E00D80B39 /* Back-Button-Normal-State@2x.png in Resources */,
 				37572D7015F2EB6500D80B39 /* Winner-BLUE.png in Resources */,
 				37572D7115F2EB6500D80B39 /* Winner-BLUE@2x.png in Resources */,
 				37572D7215F2EB6500D80B39 /* Winner-RED.png in Resources */,
@@ -717,7 +701,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				SDKROOT = iphoneos5.1;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -736,7 +720,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos5.1;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
