@@ -36,13 +36,12 @@
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUIImageView" id="443609222">
+					<object class="IBUIImageView" id="133104346">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">256</int>
-						<string key="NSFrame">{{-13, -15}, {1152, 768}}</string>
+						<string key="NSFrameSize">{1024, 748}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="955789937"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">4</int>
@@ -50,7 +49,7 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">General-Background-iPad-lowres.png</string>
+							<string key="NSResourceName">General-Background~iPad.png</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="367635865">
@@ -59,7 +58,7 @@
 						<string key="NSFrame">{{-82, 224}, {630, 530}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="443609222"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">4</int>
@@ -125,7 +124,6 @@
 						<string key="NSFrame">{{593, 404}, {222, 253}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -294,10 +292,10 @@
 							<reference ref="42046542"/>
 							<reference ref="284484247"/>
 							<reference ref="306561007"/>
-							<reference ref="443609222"/>
 							<reference ref="367635865"/>
 							<reference ref="526636507"/>
 							<reference ref="955789937"/>
+							<reference ref="133104346"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -340,8 +338,8 @@
 						<reference key="parent" ref="766721923"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">48</int>
-						<reference key="object" ref="443609222"/>
+						<int key="objectID">49</int>
+						<reference key="object" ref="133104346"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 				</array>
@@ -359,13 +357,13 @@
 				<string key="45.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="46.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="47.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="48.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="49.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">48</int>
+			<int key="maxID">49</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -409,7 +407,7 @@
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="Back-Button-Normal-State@2x.png">{60, 60}</string>
 			<string key="Blue-Score-Box-BLUE-TURN@2x.png">{630, 530}</string>
-			<string key="General-Background-iPad-lowres.png">{1152, 768}</string>
+			<string key="General-Background~iPad.png">{1024, 748}</string>
 			<string key="Red-Score-Box-RED-TURN@2x.png">{630, 530}</string>
 			<string key="Time@2x.png">{345, 215}</string>
 		</dictionary>
