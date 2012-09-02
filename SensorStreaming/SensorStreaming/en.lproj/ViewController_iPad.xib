@@ -2,7 +2,7 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1296</int>
-		<string key="IBDocument.SystemVersion">12A269</string>
+		<string key="IBDocument.SystemVersion">12B19</string>
 		<string key="IBDocument.InterfaceBuilderVersion">2549</string>
 		<string key="IBDocument.AppKitVersion">1187</string>
 		<string key="IBDocument.HIToolboxVersion">624.00</string>
@@ -42,6 +42,7 @@
 						<string key="NSFrameSize">{1024, 748}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="955789937"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">4</int>
@@ -49,7 +50,7 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">General-Background~iPad.png</string>
+							<string key="NSResourceName">General-Background-iPad-lowres.png</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="367635865">
@@ -58,7 +59,7 @@
 						<string key="NSFrame">{{-82, 224}, {630, 530}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="133104346"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">4</int>
@@ -124,6 +125,7 @@
 						<string key="NSFrame">{{593, 404}, {222, 253}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -407,7 +409,7 @@
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="Back-Button-Normal-State@2x.png">{60, 60}</string>
 			<string key="Blue-Score-Box-BLUE-TURN@2x.png">{630, 530}</string>
-			<string key="General-Background~iPad.png">{1024, 748}</string>
+			<string key="General-Background-iPad-lowres.png">{1152, 768}</string>
 			<string key="Red-Score-Box-RED-TURN@2x.png">{630, 530}</string>
 			<string key="Time@2x.png">{345, 215}</string>
 		</dictionary>
