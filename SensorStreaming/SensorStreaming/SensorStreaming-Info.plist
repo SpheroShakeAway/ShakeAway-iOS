@@ -12,6 +12,9 @@
 	<array>
 		<string>App-Icon.png</string>
 		<string>App-Icon@2x.png</string>
+		<string>App-Icon-iPad.png</string>
+		<string>App-Icon-iPad@2x.png</string>
+		<string>Default.png</string>
 	</array>
 	<key>CFBundleIcons</key>
 	<dict>
@@ -21,7 +24,12 @@
 			<array>
 				<string>App-Icon.png</string>
 				<string>App-Icon@2x.png</string>
+				<string>App-Icon-iPad.png</string>
+				<string>App-Icon-iPad@2x.png</string>
+				<string>Default.png</string>
 			</array>
+			<key>UIPrerenderedIcon</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
@@ -44,6 +52,8 @@
 	<array>
 		<string>Sullivan-Fill.otf</string>
 	</array>
+	<key>UIPrerenderedIcon</key>
+	<true/>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -59,8 +69,6 @@
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>

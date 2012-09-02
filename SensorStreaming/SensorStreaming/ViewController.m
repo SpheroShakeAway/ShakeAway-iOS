@@ -54,6 +54,13 @@
 
     /*Only start the blinking loop when the view loads*/
     robotOnline = NO;
+    
+    self.redShakesValueLabel.text  = [NSString stringWithFormat:@"%d", self.redTeam.shakesCount];
+    self.redShakesValueLabel.font = [UIFont fontWithName:@"Sullivan-Fill" size:100.0];
+    self.blueShakesValueLabel.text = [NSString stringWithFormat:@"%d", self.blueTeam.shakesCount];
+    self.blueShakesValueLabel.font = [UIFont fontWithName:@"Sullivan-Fill" size:100.0];
+    self.countdownLabel.text  = [NSString stringWithFormat:@"%d", remainingSeconds];
+    self.countdownLabel.font = [UIFont fontWithName:@"Sullivan-Fill" size:50.0];
 }
 
 - (void)viewDidUnload
@@ -69,7 +76,8 @@
 {
     // Return YES for supported orientations
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+        return ((interfaceOrientation == UIInterfaceOrientationLandscapeLeft) ||
+                (interfaceOrientation == UIInterfaceOrientationLandscapeRight));
     } else {
         return YES;
     }
