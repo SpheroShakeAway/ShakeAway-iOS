@@ -72,8 +72,8 @@
 		37572D7315F2EB6500D80B39 /* Winner-RED@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D6F15F2EB6500D80B39 /* Winner-RED@2x.png */; };
 		37572D7615F2F4E100D80B39 /* App-Icon-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D7415F2F4E000D80B39 /* App-Icon-iPad.png */; };
 		37572D7715F2F4E100D80B39 /* App-Icon-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D7515F2F4E000D80B39 /* App-Icon-iPad@2x.png */; };
-		37572D8015F2F63A00D80B39 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D7E15F2F63900D80B39 /* Default.png */; };
-		37572D8115F2F63A00D80B39 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D7F15F2F63A00D80B39 /* Default@2x.png */; };
+		37572D8415F3002000D80B39 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D8215F3001F00D80B39 /* Default.png */; };
+		37572D8515F3002000D80B39 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D8315F3002000D80B39 /* Default@2x.png */; };
 		37C911B315F09EAE00035C54 /* Sullivan-Fill.otf in Resources */ = {isa = PBXBuildFile; fileRef = 37C911B115F09C1C00035C54 /* Sullivan-Fill.otf */; };
 		37C9CD6F15EADCAB00EA9FAE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C9CD6E15EADCAB00EA9FAE /* AudioToolbox.framework */; };
 		67DCBCA415DC1E7400FBA6A5 /* RobotKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DCBCA315DC1E7400FBA6A5 /* RobotKit.framework */; };
@@ -159,8 +159,8 @@
 		37572D6F15F2EB6500D80B39 /* Winner-RED@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Winner-RED@2x.png"; sourceTree = "<group>"; };
 		37572D7415F2F4E000D80B39 /* App-Icon-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-iPad.png"; sourceTree = "<group>"; };
 		37572D7515F2F4E000D80B39 /* App-Icon-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-iPad@2x.png"; sourceTree = "<group>"; };
-		37572D7E15F2F63900D80B39 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = "../../../../Desktop/0 [SH20] - Assets/Default.png"; sourceTree = "<group>"; };
-		37572D7F15F2F63A00D80B39 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../../../Desktop/0 [SH20] - Assets/Default@2x.png"; sourceTree = "<group>"; };
+		37572D8215F3001F00D80B39 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		37572D8315F3002000D80B39 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		37C911B115F09C1C00035C54 /* Sullivan-Fill.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sullivan-Fill.otf"; sourceTree = "<group>"; };
 		37C9CD6E15EADCAB00EA9FAE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioToolbox.framework; sourceTree = "<group>"; };
 		67DCBCA315DC1E7400FBA6A5 /* RobotKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RobotKit.framework; path = SensorStreaming/Frameworks/RobotKit.framework; sourceTree = "<group>"; };
@@ -318,8 +318,8 @@
 				37572D1815F2D51400D80B39 /* App-Icon.png */,
 				37572D7415F2F4E000D80B39 /* App-Icon-iPad.png */,
 				37572D7515F2F4E000D80B39 /* App-Icon-iPad@2x.png */,
-				37572D7E15F2F63900D80B39 /* Default.png */,
-				37572D7F15F2F63A00D80B39 /* Default@2x.png */,
+				37572D8215F3001F00D80B39 /* Default.png */,
+				37572D8315F3002000D80B39 /* Default@2x.png */,
 				81EE344D1491452A00132035 /* SensorStreaming */,
 				81EE34401491452A00132035 /* Frameworks */,
 				81EE343E1491452A00132035 /* Products */,
@@ -498,8 +498,8 @@
 				37572D7315F2EB6500D80B39 /* Winner-RED@2x.png in Resources */,
 				37572D7615F2F4E100D80B39 /* App-Icon-iPad.png in Resources */,
 				37572D7715F2F4E100D80B39 /* App-Icon-iPad@2x.png in Resources */,
-				37572D8015F2F63A00D80B39 /* Default.png in Resources */,
-				37572D8115F2F63A00D80B39 /* Default@2x.png in Resources */,
+				37572D8415F3002000D80B39 /* Default.png in Resources */,
+				37572D8515F3002000D80B39 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
