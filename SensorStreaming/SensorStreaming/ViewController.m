@@ -69,18 +69,34 @@
     
     self.redShakesValueLabel = nil;
     self.blueShakesValueLabel = nil;
+    self.countdownLabel = nil;
+    
+    /*When the application is entering the background we need to close the connection to the robot*/
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:RKDeviceConnectionOnlineNotification object:nil];
+    
+    // Turn off data streaming
+    [RKSetDataStreamingCommand sendCommandWithSampleRateDivisor:0
+                                                   packetFrames:0
+                                                     sensorMask:RKDataStreamingMaskOff
+                                                    packetCount:0];
+    // Unregister for async data packets
+    [[RKDeviceMessenger sharedMessenger] removeDataStreamingObserver:self];
+    
+    // Restore stabilization (the control unit)
+    [RKStabilizationCommand sendCommandWithState:RKStabilizationStateOn];
+    
+    // Close the connection
+    [[RKRobotProvider sharedRobotProvider] closeRobotConnection];
+    
+    robotOnline = NO;
 }
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return ((interfaceOrientation == UIInterfaceOrientationLandscapeLeft) ||
-                (interfaceOrientation == UIInterfaceOrientationLandscapeRight));
-    } else {
-        return YES;
-    }
+    return ((interfaceOrientation == UIInterfaceOrientationLandscapeLeft) ||
+            (interfaceOrientation == UIInterfaceOrientationLandscapeRight));
 }
 
 -(void)appWillResignActive:(NSNotification*)notification {
@@ -193,10 +209,10 @@
         self.blueShakesValueLabel.text = [NSString stringWithFormat:@"%d", self.blueTeam.shakesCount];
         self.blueShakesValueLabel.font = [UIFont fontWithName:@"Sullivan-Fill" size:100.0];
         
-        uint8_t accel = pow(accelerometerData.acceleration.x,2) +
-                        pow(accelerometerData.acceleration.y,2) +
-                        pow(accelerometerData.acceleration.z,2);
-        if (accel > 60)
+        uint8_t accel = accelerometerData.acceleration.x +
+                        accelerometerData.acceleration.y +
+                        accelerometerData.acceleration.z;
+        if (accel > 4)
         {
             [self.currentTeam incrementShakesCount];
             [self vibrateMacro];
