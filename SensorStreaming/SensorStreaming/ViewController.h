@@ -16,7 +16,9 @@
     BOOL ledON;
     int  packetCounter;
     NSTimer *timer; // timer for game
-    int remainingSeconds; // time for game play
+    int remainingSeconds; // remaining time for game play
+    int gameLength; // time for game play
+    int turnLength; // time per turn
     double startGameTime1;
     BOOL alarm;
 }

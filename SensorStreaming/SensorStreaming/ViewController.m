@@ -55,11 +55,17 @@
     /*Only start the blinking loop when the view loads*/
     robotOnline = NO;
     
+    gameLength = 120; // CHANGE BASED ON SETTINGS
+    turnLength = 20; // CHANGE BASED ON SETTINGS
+    
+    remainingSeconds = gameLength;
+    
     self.redShakesValueLabel.text  = [NSString stringWithFormat:@"%d", self.redTeam.shakesCount];
     self.redShakesValueLabel.font = [UIFont fontWithName:@"Sullivan-Fill" size:100.0];
     self.blueShakesValueLabel.text = [NSString stringWithFormat:@"%d", self.blueTeam.shakesCount];
     self.blueShakesValueLabel.font = [UIFont fontWithName:@"Sullivan-Fill" size:100.0];
-    self.countdownLabel.text  = [NSString stringWithFormat:@"%d", remainingSeconds];
+
+    self.countdownLabel.text = [self getString: remainingSeconds];
     self.countdownLabel.font = [UIFont fontWithName:@"Sullivan-Fill" size:50.0];
 }
 
@@ -142,7 +148,7 @@
     timer = nil;
     startGameTime1 = CFAbsoluteTimeGetCurrent();
     alarm = NO;
-    remainingSeconds = 60;
+    
     [self updateTimer];
     timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
 }
@@ -209,10 +215,10 @@
         self.blueShakesValueLabel.text = [NSString stringWithFormat:@"%d", self.blueTeam.shakesCount];
         self.blueShakesValueLabel.font = [UIFont fontWithName:@"Sullivan-Fill" size:100.0];
         
-        uint8_t accel = accelerometerData.acceleration.x +
-                        accelerometerData.acceleration.y +
-                        accelerometerData.acceleration.z;
-        if (accel > 4)
+        uint8_t accel = pow(accelerometerData.acceleration.x,2) +
+                        pow(accelerometerData.acceleration.y,2) +
+                        pow(accelerometerData.acceleration.z,2);
+        if (accel > 70.0)
         {
             [self.currentTeam incrementShakesCount];
             [self vibrateMacro];
@@ -283,14 +289,15 @@
 
 -(void) updateTimer
 {
-    self.countdownLabel.text  = [NSString stringWithFormat:@"%d", remainingSeconds];
+    self.countdownLabel.text = [self getString:remainingSeconds];
     self.countdownLabel.font = [UIFont fontWithName:@"Sullivan-Fill" size:50.0];
     if (remainingSeconds <= 0)
     {
         [self endGame];
         return;
     }
-    if ((remainingSeconds % 5) == 0)
+    if ((((gameLength - remainingSeconds) % turnLength) == 0) ||
+        (((gameLength - remainingSeconds - 5) % turnLength) == 0))
     {
         [self changeTurn];
     }
@@ -384,6 +391,10 @@
 }
 
 
+- (NSString*)getString: (int) time
+{
+    return [NSString stringWithFormat:@"%d:%.2d", (time / 60), (time % 60)];
+}
 
 
 @end

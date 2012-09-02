@@ -10,7 +10,7 @@
 
 @interface Team : NSObject
 
-@property (nonatomic) uint8_t shakesCount;
+@property (nonatomic) int shakesCount;
 @property (nonatomic) double r;
 @property (nonatomic) double g;
 @property (nonatomic) double b;

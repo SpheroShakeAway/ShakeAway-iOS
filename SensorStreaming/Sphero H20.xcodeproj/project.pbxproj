@@ -85,6 +85,10 @@
 		37572D9915F303DA00D80B39 /* Instruction-PG-4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D8F15F303D400D80B39 /* Instruction-PG-4@2x.png */; };
 		37572D9A15F303DA00D80B39 /* Instruction-PG-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D9015F303D800D80B39 /* Instruction-PG-5.png */; };
 		37572D9B15F303DA00D80B39 /* Instruction-PG-5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37572D9115F303D900D80B39 /* Instruction-PG-5@2x.png */; };
+		376E193D15F316C3004ADE4B /* Forward-Button-Active-State.png in Resources */ = {isa = PBXBuildFile; fileRef = 376E193915F316C3004ADE4B /* Forward-Button-Active-State.png */; };
+		376E193E15F316C3004ADE4B /* Forward-Button-Active-State@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 376E193A15F316C3004ADE4B /* Forward-Button-Active-State@2x.png */; };
+		376E193F15F316C3004ADE4B /* Forward-Button-Normal-State.png in Resources */ = {isa = PBXBuildFile; fileRef = 376E193B15F316C3004ADE4B /* Forward-Button-Normal-State.png */; };
+		376E194015F316C3004ADE4B /* Forward-Button-Normal-State@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 376E193C15F316C3004ADE4B /* Forward-Button-Normal-State@2x.png */; };
 		37C911B315F09EAE00035C54 /* Sullivan-Fill.otf in Resources */ = {isa = PBXBuildFile; fileRef = 37C911B115F09C1C00035C54 /* Sullivan-Fill.otf */; };
 		37C9CD6F15EADCAB00EA9FAE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C9CD6E15EADCAB00EA9FAE /* AudioToolbox.framework */; };
 		67DCBCA415DC1E7400FBA6A5 /* RobotKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DCBCA315DC1E7400FBA6A5 /* RobotKit.framework */; };
@@ -183,6 +187,10 @@
 		37572D8F15F303D400D80B39 /* Instruction-PG-4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Instruction-PG-4@2x.png"; sourceTree = "<group>"; };
 		37572D9015F303D800D80B39 /* Instruction-PG-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Instruction-PG-5.png"; sourceTree = "<group>"; };
 		37572D9115F303D900D80B39 /* Instruction-PG-5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Instruction-PG-5@2x.png"; sourceTree = "<group>"; };
+		376E193915F316C3004ADE4B /* Forward-Button-Active-State.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Forward-Button-Active-State.png"; sourceTree = "<group>"; };
+		376E193A15F316C3004ADE4B /* Forward-Button-Active-State@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Forward-Button-Active-State@2x.png"; sourceTree = "<group>"; };
+		376E193B15F316C3004ADE4B /* Forward-Button-Normal-State.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Forward-Button-Normal-State.png"; sourceTree = "<group>"; };
+		376E193C15F316C3004ADE4B /* Forward-Button-Normal-State@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Forward-Button-Normal-State@2x.png"; sourceTree = "<group>"; };
 		37C911B115F09C1C00035C54 /* Sullivan-Fill.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sullivan-Fill.otf"; sourceTree = "<group>"; };
 		37C9CD6E15EADCAB00EA9FAE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioToolbox.framework; sourceTree = "<group>"; };
 		67DCBCA315DC1E7400FBA6A5 /* RobotKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RobotKit.framework; path = SensorStreaming/Frameworks/RobotKit.framework; sourceTree = "<group>"; };
@@ -228,6 +236,10 @@
 		37572D9C15F303E300D80B39 /* 6-[SH20]-Instructions */ = {
 			isa = PBXGroup;
 			children = (
+				376E193915F316C3004ADE4B /* Forward-Button-Active-State.png */,
+				376E193A15F316C3004ADE4B /* Forward-Button-Active-State@2x.png */,
+				376E193B15F316C3004ADE4B /* Forward-Button-Normal-State.png */,
+				376E193C15F316C3004ADE4B /* Forward-Button-Normal-State@2x.png */,
 				37572D8815F303C800D80B39 /* Instruction-PG-1.png */,
 				37572D8915F303CA00D80B39 /* Instruction-PG-1@2x.png */,
 				37572D8A15F303CC00D80B39 /* Instruction-PG-2.png */,
@@ -552,6 +564,10 @@
 				37572D9915F303DA00D80B39 /* Instruction-PG-4@2x.png in Resources */,
 				37572D9A15F303DA00D80B39 /* Instruction-PG-5.png in Resources */,
 				37572D9B15F303DA00D80B39 /* Instruction-PG-5@2x.png in Resources */,
+				376E193D15F316C3004ADE4B /* Forward-Button-Active-State.png in Resources */,
+				376E193E15F316C3004ADE4B /* Forward-Button-Active-State@2x.png in Resources */,
+				376E193F15F316C3004ADE4B /* Forward-Button-Normal-State.png in Resources */,
+				376E194015F316C3004ADE4B /* Forward-Button-Normal-State@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
