@@ -25,7 +25,7 @@
 
 - (void)viewDidUnload
 {
-    [self setDurationLabel:nil];
+//    [self setDurationLabel:nil];
     [self setGameDurationLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -40,10 +40,15 @@
 }
 - (IBAction)gameDurationChanged:(UIButton *)sender {
     gameSeconds = [[sender titleForState:UIControlStateNormal] intValue] * 60;
+    gameDurationLabel.text = [sender titleForState:UIControlStateNormal];
+//    gameDurationLabel.font = [UIFont fontWithName:@"Sullivan-Fill" size:20.0];
+
 }
 - (IBAction)turnDurationChanged:(UIButton *)sender {
     turnSeconds = [[sender titleForState:UIControlStateNormal] intValue];
-    [turnDurationLabel set];
+    turnDurationLabel.text = [sender titleForState:UIControlStateNormal];
+//    turnDurationLabel.font = [UIFont fontWithName:@"Sullivan-Fill" size:20.0];
+
 }
 
 - (void)dealloc {

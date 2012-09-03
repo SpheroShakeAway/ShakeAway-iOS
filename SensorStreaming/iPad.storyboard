@@ -451,6 +451,10 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="gameDurationLabel" destination="epb-rF-d2H" id="qJ6-ar-dsF"/>
+                        <outlet property="turnDurationLabel" destination="LUn-Ol-wqq" id="dsa-Hm-DUe"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="2060" y="1031"/>
@@ -655,6 +659,12 @@
     <classes>
         <class className="GameSettingsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GameSettingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="gameDurationChanged:" candidateClass="UIButton"/>
+                <relationship kind="action" name="turnDurationChanged:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="gameDurationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="turnDurationLabel" candidateClass="UILabel"/>
+            </relationships>
         </class>
         <class className="HomeScreenViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeScreenViewController.h"/>

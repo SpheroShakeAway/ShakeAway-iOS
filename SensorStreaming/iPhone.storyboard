@@ -582,9 +582,8 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="durationLabel" destination="dSB-Xx-EHz" id="Mft-uO-wxr"/>
-                        <outlet property="gameDurationLabel" destination="Dpt-nV-smg" id="ysw-5D-oXr"/>
-                        <outlet property="turnDurationLabel" destination="dSB-Xx-EHz" id="cyV-Pb-nLu"/>
+                        <outlet property="gameDurationLabel" destination="Dpt-nV-smg" id="v9f-Vk-jfE"/>
+                        <outlet property="turnDurationLabel" destination="dSB-Xx-EHz" id="d3p-d2-sCC"/>
                     </connections>
                 </viewController>
             </objects>
@@ -707,6 +706,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="nOe-sl-IHe"/>
+        <segue reference="Li5-ez-yRa"/>
     </inferredMetricsTieBreakers>
 </document>
