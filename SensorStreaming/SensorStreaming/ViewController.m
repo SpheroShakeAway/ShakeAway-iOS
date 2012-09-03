@@ -67,6 +67,7 @@
 
     self.countdownLabel.text = [self getString: remainingSeconds];
     self.countdownLabel.font = [UIFont fontWithName:@"Sullivan-Fill" size:50.0];
+    [self setupRobotConnection];
 }
 
 - (void)viewDidUnload
