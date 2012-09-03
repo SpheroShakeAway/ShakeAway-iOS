@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "RobotKit/RobotKit.h"
 #include <AudioToolbox/AudioToolbox.h>
+#include "GameSettings.h"
 
 #define TOTAL_PACKET_COUNT 200
 #define PACKET_COUNT_THRESHOLD 50
@@ -55,8 +56,8 @@
     /*Only start the blinking loop when the view loads*/
     robotOnline = NO;
     
-    gameLength = 120; // CHANGE BASED ON SETTINGS
-    turnLength = 20; // CHANGE BASED ON SETTINGS
+    gameLength = gameSeconds; // CHANGE BASED ON SETTINGS
+    turnLength = turnSeconds; // CHANGE BASED ON SETTINGS
     
     remainingSeconds = gameLength;
     

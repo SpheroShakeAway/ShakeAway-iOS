@@ -11,15 +11,15 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jNA-eT-uhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Instruction2View" id="Sjs-kQ-cu6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OI9-OY-Ud8">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Instruction-PG-2.png" id="J0f-yZ-xJx">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <rect key="frame" x="0.0" y="-10" width="480" height="320"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AKJ-ry-oBq">
-                                <rect key="frame" x="450" y="290" width="30" height="30"/>
+                                <rect key="frame" x="450" y="0.0" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="Forward-Button-Normal-State.png">
@@ -38,6 +38,7 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="exl-9y-8ao"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -52,15 +53,15 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFj-yP-MwR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Instruction3View" id="ish-ej-xpq" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BV9-fq-pKf">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Instruction-PG-3.png" id="gr0-10-BmF">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <rect key="frame" x="0.0" y="-20" width="480" height="320"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qPo-Sh-vkz">
-                                <rect key="frame" x="450" y="290" width="30" height="30"/>
+                                <rect key="frame" x="450" y="0.0" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="Forward-Button-Normal-State.png">
@@ -79,6 +80,7 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="Sbn-sK-gM7"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -93,15 +95,15 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Zc-cM-TgG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Instruction4View" id="iMg-iC-rPj" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8AU-5O-F6h">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Instruction-PG-4.png" id="muq-d8-83k">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <rect key="frame" x="0.0" y="-10" width="480" height="320"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="PlN-d0-I30">
-                                <rect key="frame" x="450" y="290" width="30" height="30"/>
+                                <rect key="frame" x="450" y="0.0" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="Forward-Button-Normal-State.png">
@@ -120,6 +122,7 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="U25-9a-qkD"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -134,15 +137,15 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="miP-Ro-V88" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Instruction5View" id="OD4-md-WsC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bf5-aX-z8N">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Instruction-PG-5.png" id="p7p-ds-0Hn">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <rect key="frame" x="0.0" y="-20" width="480" height="320"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="u8e-fu-aal">
-                                <rect key="frame" x="450" y="290" width="30" height="30"/>
+                                <rect key="frame" x="450" y="0.0" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="Forward-Button-Normal-State.png">
@@ -169,11 +172,11 @@
             </objects>
             <point key="canvasLocation" x="4094" y="-399"/>
         </scene>
-        <!--View Controller - HomeView-->
+        <!--Home Screen View Controller - HomeView-->
         <scene sceneID="X6f-Ea-hR4">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJM-5n-mrm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController title="HomeView" wantsFullScreenLayout="YES" id="HqL-FP-bZV" sceneMemberID="viewController">
+                <viewController title="HomeView" wantsFullScreenLayout="YES" id="HqL-FP-bZV" customClass="HomeScreenViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z7U-Gq-G4w">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,7 +186,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Qpa-Kg-Wwf">
-                                <rect key="frame" x="0.0" y="0.0" width="151" height="151"/>
+                                <rect key="frame" x="329" y="0.0" width="151" height="151"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="Start-Button-Normal-State.png">
@@ -323,11 +326,11 @@
             </objects>
             <point key="canvasLocation" x="1566" y="4"/>
         </scene>
-        <!--View Controller - SettingsView-->
+        <!--Game Settings View Controller - SettingsView-->
         <scene sceneID="986-qX-4ba">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E64-9M-BMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController title="SettingsView" id="2bQ-fA-HWk" sceneMemberID="viewController">
+                <viewController title="SettingsView" id="2bQ-fA-HWk" customClass="GameSettingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tlR-wV-os6">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -347,6 +350,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="gameDurationChanged:" destination="2bQ-fA-HWk" eventType="touchUpInside" id="zut-bk-aox"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="V9B-td-cdr">
                                 <rect key="frame" x="20" y="20" width="45" height="45"/>
@@ -382,6 +388,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="gameDurationChanged:" destination="2bQ-fA-HWk" eventType="touchUpInside" id="PON-gc-YuH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gLQ-kS-7KV">
                                 <rect key="frame" x="416" y="116" width="32" height="32"/>
@@ -394,6 +403,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="gameDurationChanged:" destination="2bQ-fA-HWk" eventType="touchUpInside" id="tYU-Ax-oo8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1cd-TH-KKA">
                                 <rect key="frame" x="33" y="232" width="32" height="32"/>
@@ -406,6 +418,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="turnDurationChanged:" destination="2bQ-fA-HWk" eventType="touchUpInside" id="7zQ-cf-QGd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0DO-0R-Ayq">
                                 <rect key="frame" x="110" y="232" width="32" height="32"/>
@@ -418,6 +433,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="turnDurationChanged:" destination="2bQ-fA-HWk" eventType="touchUpInside" id="0YK-EF-CpH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FIq-2e-QeS">
                                 <rect key="frame" x="188" y="232" width="32" height="32"/>
@@ -430,6 +448,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="turnDurationChanged:" destination="2bQ-fA-HWk" eventType="touchUpInside" id="Yrm-Zo-JSL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="K0R-Zu-3yZ">
                                 <rect key="frame" x="268" y="232" width="32" height="32"/>
@@ -442,6 +463,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="turnDurationChanged:" destination="2bQ-fA-HWk" eventType="touchUpInside" id="uAy-1o-VGu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EGs-al-Wew">
                                 <rect key="frame" x="341" y="232" width="32" height="32"/>
@@ -454,6 +478,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="turnDurationChanged:" destination="2bQ-fA-HWk" eventType="touchUpInside" id="Vjf-Ru-FWf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MOI-Ev-ee3">
                                 <rect key="frame" x="416" y="232" width="32" height="32"/>
@@ -466,6 +493,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="turnDurationChanged:" destination="2bQ-fA-HWk" eventType="touchUpInside" id="1xU-Yp-UTH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RRk-wr-oNB">
                                 <rect key="frame" x="188" y="116" width="32" height="32"/>
@@ -478,6 +508,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="gameDurationChanged:" destination="2bQ-fA-HWk" eventType="touchUpInside" id="6wz-VV-m6g"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8cK-XZ-78E">
                                 <rect key="frame" x="268" y="116" width="32" height="32"/>
@@ -490,6 +523,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="gameDurationChanged:" destination="2bQ-fA-HWk" eventType="touchUpInside" id="cRD-y0-0UE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MaO-uo-CkA">
                                 <rect key="frame" x="341" y="116" width="32" height="32"/>
@@ -502,6 +538,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="gameDurationChanged:" destination="2bQ-fA-HWk" eventType="touchUpInside" id="mdR-aP-Y1A"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Game Duration [mins]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="XMk-hQ-uF9">
                                 <rect key="frame" x="28" y="73" width="166" height="21"/>
@@ -542,6 +581,11 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="durationLabel" destination="dSB-Xx-EHz" id="Mft-uO-wxr"/>
+                        <outlet property="gameDurationLabel" destination="Dpt-nV-smg" id="ysw-5D-oXr"/>
+                        <outlet property="turnDurationLabel" destination="dSB-Xx-EHz" id="cyV-Pb-nLu"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1566" y="406"/>
@@ -552,15 +596,15 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DhP-Dc-lrh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Instruction1View" id="qWB-bY-2CN" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2g0-CI-pUk">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Instruction-PG-1.png" id="22f-Ta-B3Y">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <rect key="frame" x="0.0" y="-20" width="480" height="320"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="t6b-kz-Zaz">
-                                <rect key="frame" x="450" y="290" width="30" height="30"/>
+                                <rect key="frame" x="450" y="0.0" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" backgroundImage="Forward-Button-Normal-State.png">
@@ -579,7 +623,7 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZyZ-Rs-KWk"/>
-                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -636,6 +680,18 @@
         <image name="Time.png" width="173" height="108"/>
     </resources>
     <classes>
+        <class className="GameSettingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameSettingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="gameDurationChanged:" candidateClass="UIButton"/>
+                <relationship kind="action" name="turnDurationChanged:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="gameDurationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="turnDurationLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="HomeScreenViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeScreenViewController.h"/>
+        </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
@@ -651,6 +707,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="iHh-q8-D54"/>
+        <segue reference="nOe-sl-IHe"/>
     </inferredMetricsTieBreakers>
 </document>

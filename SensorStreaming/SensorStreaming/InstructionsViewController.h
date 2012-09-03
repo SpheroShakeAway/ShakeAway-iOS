@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InstructionsViewController : UIPageViewController
-
-@property (retain, nonatomic) IBOutlet UIImageView *instructionImage;
-@property (nonatomic) int instructionPageNumber;
+@interface InstructionsViewController : UIViewController
 
 @end

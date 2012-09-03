@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeScreenViewController : UIPageViewController
+@interface HomeScreenViewController : UIViewController
 
 @end

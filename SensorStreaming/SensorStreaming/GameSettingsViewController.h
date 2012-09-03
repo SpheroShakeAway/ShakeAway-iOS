@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GameSettings.h"
 
-@interface GameSettingsViewController : UIPageViewController
+@interface GameSettingsViewController : UIViewController
+@property (retain, nonatomic) IBOutlet UILabel *gameDurationLabel;
 
+@property (retain, nonatomic) IBOutlet UILabel *turnDurationLabel;
 @end

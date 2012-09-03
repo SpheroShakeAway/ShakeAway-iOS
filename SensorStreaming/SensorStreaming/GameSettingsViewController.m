@@ -7,21 +7,15 @@
 //
 
 #import "GameSettingsViewController.h"
+#import "GameSettings.h"
 
 @interface GameSettingsViewController ()
 
 @end
 
 @implementation GameSettingsViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize gameDurationLabel;
+@synthesize turnDurationLabel;
 
 - (void)viewDidLoad
 {
@@ -31,6 +25,8 @@
 
 - (void)viewDidUnload
 {
+    [self setDurationLabel:nil];
+    [self setGameDurationLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -38,7 +34,21 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    // Return YES for supported orientations
+    return ((interfaceOrientation == UIInterfaceOrientationLandscapeLeft) ||
+            (interfaceOrientation == UIInterfaceOrientationLandscapeRight));
+}
+- (IBAction)gameDurationChanged:(UIButton *)sender {
+    gameSeconds = [[sender titleForState:UIControlStateNormal] intValue] * 60;
+}
+- (IBAction)turnDurationChanged:(UIButton *)sender {
+    turnSeconds = [[sender titleForState:UIControlStateNormal] intValue];
+    [turnDurationLabel set];
 }
 
+- (void)dealloc {
+    [turnDurationLabel release];
+    [gameDurationLabel release];
+    [super dealloc];
+}
 @end

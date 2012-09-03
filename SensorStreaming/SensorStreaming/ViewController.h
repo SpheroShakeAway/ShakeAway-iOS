@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Team.h"
+#import "GameSettings.h"
 
 @class RKDeviceAsyncData;
 
